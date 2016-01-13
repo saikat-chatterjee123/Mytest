@@ -1,0 +1,96 @@
+<div class="hpanel" ng-controller="InboxCtrl">
+	<!-- <div class="panel-body" ng-controller="MailContentCtrl">
+		<div class="row"><a ng-click="goMailList()">Go to Mailbox</a></div>
+		<div class="row" ng-bind="mailItems.content"></div>
+	</div> -->
+	<div ng-controller="MailContentCtrl">
+		
+		<div class="panel-heading hbuilt">
+			<div class="p-xs h4">
+				<small class="pull-right">
+					<button class="btn btn-default" ng-click="goMailList()"><i class="fa fa-arrow-left"></i> Back</button>&nbsp <span title="{{mailItems.date | date:'medium'}}"> {{mailItems.date | date:'h:mm a'}}</span><!-- (16 hours ago) -->
+				</small>
+					Email view <!-- {{(getHours() - mailItems.date) | date:'HH'}} -->
+			</div>
+		</div>
+		<div class="border-top border-left border-right bg-light">
+			<div class="p-m">
+				<div>
+					<span class="font-extra-bold">Subject: </span>
+					<span ng-bind="mailItems.subject"></span>
+				</div>
+				<div>
+					<span class="font-extra-bold">From: </span>
+					<a href="mailto:{{mailItems.from}}" ng-bind="mailItems.from"></a>
+				</div>
+				<div>
+					<span class="font-extra-bold">Date: </span>
+					<span ng-bind="mailItems.date | date:'dd.MM.yyyy'"></span>
+				</div>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div ng-bind="mailItems.content">
+			</div>
+		</div>
+
+		<!-- attachment files -->
+		<!-- <div class="border-bottom border-left border-right bg-white p-m">
+			<p class="m-b-md">
+				<span><i class="fa fa-paperclip"></i> 3 attachments - </span>
+				<a href="#" class="btn btn-default btn-xs">Download all in zip format <i class="fa fa-file-zip-o"></i> </a>
+			</p>
+			<div>
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="hpanel">
+							<div class="panel-body file-body">
+								<i class="fa fa-file-pdf-o text-info"></i>
+							</div>
+							<div class="panel-footer">
+								<a href="#">Document_2016.doc</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="hpanel">
+							<div class="panel-body file-body">
+								<i class="fa fa-file-audio-o text-warning"></i>
+							</div>
+							<div class="panel-footer">
+								<a href="#">Audio_2016.doc</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="hpanel">
+							<div class="panel-body file-body">
+								<i class="fa fa-file-excel-o text-success"></i>
+							</div>
+							<div class="panel-footer">
+								<a href="#">Sheets_2016.doc</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div class="panel-footer text-right">
+			<div class="btn-group">
+				<button class="btn btn-default"><i class="fa fa-reply"></i> Reply</button>
+				<button class="btn btn-default"><i class="fa fa-arrow-right"></i> Forward</button>
+				<button class="btn btn-default"><i class="fa fa-print"></i> Print</button>
+				<button class="btn btn-default"><i class="fa fa-trash-o"></i> Remove</button>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+</div>
+
+
+
+

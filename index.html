@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css" />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" />
+
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" />
+    <link rel="stylesheet" href="styles/static_custom.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+
+
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body class="hide-sidebar">
+
+<!-- Simple splash screen-->
+<div class="splash"> <div class="color-line"></div><div class="splash-title"><h1>Homer - Responsive Admin Theme</h1><p>Special AngularJS Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p><img src="images/loading-bars.svg" width="64" height="64" /> </div> </div>
+<!--[if lt IE 7]>
+<p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+    <!-- Header -->
+    <div ng-include="'includes/header.html'"></div>
+
+    <!-- Main Wrapper -->
+    <div id="wrapper">
+
+
+        <div class="normalheader transition animated fadeIn small-header">
+            <div class="hpanel">
+                <div class="panel-body">
+
+                    <div id="hbreadcrumb" class="pull-right">
+                        <ol class="hbreadcrumb breadcrumb">
+                            <li><a href="index-2.html">Dashboard</a></li>
+                            <li>
+                                <span>App views</span>
+                            </li>
+                            <li class="active">
+                                <span>Mailbox</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <h2 class="font-light m-b-xs">
+                        Mailbox
+                    </h2>
+                    <small>Mailbox - Email list.</small>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content animate-panel">
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <div ng-include="'includes/sidebar.html'"></div>
+
+                </div>
+                <div class="col-md-9">
+
+                    <div ng-view autoscroll="true"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div ng-include="'includes/footer.html'"></div>
+
+    </div>
+
+
+    <!-- Vendor scripts -->
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="vendor/iCheck/icheck.min.js"></script>
+    <script src="vendor/peity/jquery.peity.min.js"></script>
+    <script src="vendor/sparkline/index.js"></script>
+
+    <!-- App scripts -->
+    <script src="scripts/homer.js"></script>
+
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="inbox/inbox.js"></script>
+  <!--<script src="directives/inbox.js"></script>?-->
+  <script src="trash/trash.js"></script>
+
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

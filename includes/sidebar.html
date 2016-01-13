@@ -1,0 +1,14 @@
+<div class="hpanel">
+    <div class="panel-body">
+
+        <ul class="mailbox-list" ng-controller="NavCtrl">
+            <li ng-repeat="item in items" ng-class="{active: isActive(item)}">
+                <a href="#{{item.path}}">
+                    <!--<span class="pull-right">12</span>-->
+                    <i class="fa {{item.icon}}"></i> {{item.title}}
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</div>
